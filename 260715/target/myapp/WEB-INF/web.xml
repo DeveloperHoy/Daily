@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns="https://jakarta.ee/xml/ns/jakartaee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="https://jakarta.ee/xml/ns/jakartaee
+             https://jakarta.ee/xml/ns/jakartaee/web-app_6_0.xsd"
+         version="6.0">
+
+    <display-name>MyApp</display-name>
+
+    <!-- HelloServlet은 코드에 @WebServlet 어노테이션으로 이미 /hello 매핑되어 있어서
+         여기서는 등록 안 해도 됨. web.xml은 어노테이션으로 못 하는
+         공통 설정(세션 타임아웃, 웰컴 파일, 에러 페이지)에만 사용 -->
+
+    <session-config>
+        <session-timeout>30</session-timeout> <!-- 분 단위 -->
+    </session-config>
+
+    <welcome-file-list>
+        <welcome-file>index.jsp</welcome-file>
+    </welcome-file-list>
+
+</web-app>
